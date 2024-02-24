@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0225e86616.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+    <!-- <link rel="stylesheet" href="main.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/main.css') }}">
+</head>
+<body>
+
+        <div class="insideBox">
+            <form method="post" id="volumeIncrease"><button type="submit"><i class="fa-solid fa-plus"></i></button>
+            </form>
+        </div>
+
+        <div class="insideBox">
+            <form method="post" id="previousTrack"><button type="submit"><i class="fa-solid fa-backward"></i></button></form>
+            <form method="post" id="backSeek"><button type="submit"><i class="fa-solid fa-rotate-left"></i></button></form>
+            <form method="post" id="pause"><button type="submit"><i class="fa-solid fa-pause"></i></button></form>
+            <form method="post" id="forwardSeek"><button type="submit"><i class="fa-solid fa-rotate-right"></i></button></form>
+            <form method="post" id="nextTrack"><button type="submit"><i class="fa-solid fa-forward"></i></button></form>
+        </div>
+
+        <div class="insideBox">
+            <form method="post" id="volumeDecrease"><button type="submit"><i class="fa-solid fa-minus"></i></button></form>
+        </div>
+
+        <div class="insideBox">
+            <div class="search">
+                <input type="text" class="search__input" placeholder="Search...">
+                <form method="post" id="searchYouTube"><button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button></form>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="insideBox">
+                <form method="post" id="newTab"><button type="submit"><i class="fa-solid fa-plus"></i></i></button></form>
+                <form method="post" id="scrollUp"><button type="submit"><i class="fa-solid fa-arrow-up"></i></button></form>
+                <form method="post" id="escape"><button type="submit"><i class="fa-solid fa-minimize"></i></button></form>
+                <form method="post" id="closeTab"><button type="submit"><i class="fa-solid fa-x"></i></button></form>
+            </div>
+
+            <div class="insideBox">
+                <form method="post" id="back"><button type="submit"><i class="fa-solid fa-arrow-left"></i></button></form>
+                <form method="post" id="scrollDown"><button type="submit"><i class="fa-solid fa-arrow-down"></i></button></form>
+                <form method="post" id="nextVideo"><button type="submit"><i class="fa-solid fa-arrow-right"></i></button></form>
+                <form method="post" id="fullScreen"><button type="submit"><i class="fa-solid fa-expand"></i></button></form>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="insideBox">
+                <form method="post" id="oneMainYT"><button type="submit"><i class="fa-solid fa-1"></i></button></form>
+                <form method="post" id="twoMainYT"><button type="submit"><i class="fa-solid fa-2"></i></button></form>
+                <form method="post" id="threeMainYT"><button type="submit"><i class="fa-solid fa-3"></i></button></form>
+                <form method="post" id="fourMainYT"><button type="submit"><i class="fa-solid fa-4"></i></button></form>
+                <form method="post" id="goBack"><button type="submit"><i class="fa-solid fa-arrow-left"></i></button></form>
+            </div>
+
+            <div class="insideBox">
+                <form method="post" id="oneInsideYT"><button type="submit"><i class="fa-solid fa-1"></i></button></form>
+                <form method="post" id="twoInsideYT"><button type="submit"><i class="fa-solid fa-2"></i></button></form>
+                <form method="post" id="threeInsideYT"><button type="submit"><i class="fa-solid fa-3"></i></button></form>
+                <form method="post" id="fourInsideYT"><button type="submit"><i class="fa-solid fa-4"></i></button></form>
+                <form method="post" id="refresh"><button type="submit"><i class="fa-solid fa-arrows-rotate"></i></button></form>
+            </div>
+        </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).on('submit', '#volumeIncrease', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "volumeIncrease"}})});
+        $(document).on('submit', '#previousTrack', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "previousTrack"}})});
+        $(document).on('submit', '#backSeek', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "backSeek"}})});
+        $(document).on('submit', '#pause', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "pause"}})});
+        $(document).on('submit', '#forwardSeek', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "forwardSeek"}})});
+        $(document).on('submit', '#nextTrack', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "nextTrack"}})});
+        $(document).on('submit', '#volumeDecrease', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "volumeDecrease"}})});
+        $(document).on('submit', '#searchYouTube', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "searchYouTube", searchData: $("#search__input").attr('value')}})});
+        $(document).on('submit', '#newTab', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "newTab"}})});
+        $(document).on('submit', '#scrollUp', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "scrollUp"}})});
+        $(document).on('submit', '#escape', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "escape"}})});
+        $(document).on('submit', '#closeTab', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "closeTab"}})});
+        $(document).on('submit', '#back', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "back"}})});
+        $(document).on('submit', '#scrollDown', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "scrollDown"}})});
+        $(document).on('submit', '#nextVideo', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "nextVideo"}})});
+        $(document).on('submit', '#fullScreen', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "fullScreen"}})});
+        $(document).on('submit', '#oneMainYT', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "oneMainYT"}})});
+        $(document).on('submit', '#twoMainYT', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "twoMainYT"}})});
+        $(document).on('submit', '#threeMainYT', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "threeMainYT"}})});
+        $(document).on('submit', '#fourMainYT', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "fourMainYT"}})});
+        $(document).on('submit', '#oneInsideYT', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "oneInsideYT"}})});
+        $(document).on('submit', '#twoInsideYT', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "twoInsideYT"}})});
+        $(document).on('submit', '#threeInsideYT', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "threeInsideYT"}})});
+        $(document).on('submit', '#fourInsideYT', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "fourInsideYT"}})});
+        $(document).on('submit', '#refresh', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "refresh"}})});
+    </script>
+
+
+  </body>
+</html>

@@ -1,0 +1,175 @@
+:root {
+    --hover: #d5d5d5;
+    --mainShadow: #28282B;
+    
+    --main: #515457;
+    --mainText: #28282B;
+    --mainShaddow: #474952;
+
+    --youTube: #515457;
+    --youTubeButton: #515457;
+    --youTubeText: #28282B;
+    --youTubeBoxShaddow: #eababa;
+
+    --googleChrome: #515457;
+    --googleChromeButton: #515457;
+    --googleChromeText: #28282B;
+    --googleChromeBoxShaddow: #eababa;
+
+    --fMovies: #515457;
+    --fMoviesButton: #515457;
+    --fMoviesText: #28282B;
+    --fMoviesBoxShaddow: #cac8e7;
+
+    --netflix: #515457;
+    --netflixButton: #515457;
+    --netflixText: #28282B;
+    --netflixBoxShaddow: #e7c8c8;
+
+    --primeVideos: #515457;
+    --primeVideosButton: #515457;
+    --primeVideosText: #28282B;
+    --primeVideosBoxShaddow: #babaea;
+
+}
+
+html, body, .home {
+    /* height: 100%; */
+    background: var(--main);
+    /* background-color: #303030; */
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body, .home, .youTube, .fMovies, .netflix, .primeMovies, .googleChrome {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.youTube{background: var(--youTube); display: none;}
+.fMovies{background: var(--fMovies); display: none;}
+.netflix{background: var(--netflix); display: none;}
+.primeMovies{background: var(--primeMovies); display: none;}
+.googleChrome{background: var(--googleChrome); display: none;}
+
+img{
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--mainShaddow), -0.2rem -0.2rem 0.5rem var(--mainShadow);
+    transition: 0.3s ease;
+    color: var(--mainText);
+    margin-bottom: 0.5rem;
+}
+
+.insideBox{
+    display: flex;
+    flex-direction: row;
+}
+
+button{
+    background-color: var(--main);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--mainShaddow), -0.2rem -0.2rem 0.5rem var(--mainShadow);
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: none;
+    color: var(--mainText);
+    font-size: 0.8rem;
+    margin: 0.3rem;
+}
+
+button:hover {
+    color: var(--hover);
+}
+
+button:active {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--mainShaddow), inset -0.2rem -0.2rem 0.5rem var(--mainShadow);
+}
+
+.box{
+    margin-top: 0.5rem;
+}
+
+#wrapper, image{
+    width:100%;
+}
+
+#screenImage{
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem;
+}
+
+/*  SEARCH  */
+
+.search{
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--mainShaddow), inset -0.2rem -0.2rem 0.5rem var(--mainShadow);
+    background: none;
+    font-family: inherit;
+    color: var(--mainText);
+    align-items: center;
+    font-size: 1rem;
+}
+
+.searchInput {
+    width: 14rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--mainShaddow), inset -0.2rem -0.2rem 0.5rem var(--mainShadow);
+    background: none;
+    font-family: inherit;
+    color: var(--mainText);
+    align-items: center;
+    padding-left: 1rem;
+    font-size: 1rem;
+}
+
+
+.searchInput::-moz-placeholder {
+    color: var(--greyLight-3);
+}
+
+
+.searchInput:-ms-input-placeholder {
+    color: var(--greyLight-3);
+}
+
+
+.searchInput::placeholder {
+    color: var(--greyLight-3);
+}
+
+.searchInput:focus {
+    outline: none;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--mainShaddow), -0.2rem -0.2rem 0.5rem var(--mainShadow);
+}
+
+.searchInput:focus + .search__icon {
+    color: var(--hover);
+}
+
+
+
+
+@media (max-width: 1000px) { 
+
+    #screenImage{
+        width: 95%;
+        height: 215px;
+    }
+
+}

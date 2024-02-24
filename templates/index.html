@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0225e86616.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+    <!-- <link rel="stylesheet" href="main.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/main.css') }}">
+</head>
+<body>
+    
+    <div class="insideBox">
+        <form method="post" id="volumeIncrease"><button type="submit"><i class="fa-solid fa-plus"></i></button>
+        </form>
+    </div>
+
+    <div class="insideBox">
+        <form method="post" id="previousTrack"><button type="submit"><i class="fa-solid fa-backward"></i></button></form>
+        <form method="post" id="backSeek"><button type="submit"><i class="fa-solid fa-rotate-left"></i></button></form>
+        <form method="post" id="pause"><button type="submit"><i class="fa-solid fa-pause"></i></button></form>
+        <form method="post" id="forwardSeek"><button type="submit"><i class="fa-solid fa-rotate-right"></i></button></form>
+        <form method="post" id="nextTrack"><button type="submit"><i class="fa-solid fa-forward"></i></button></form>
+    </div>
+
+    <div class="insideBox">
+        <form method="post" id="volumeDecrease"><button type="submit"><i class="fa-solid fa-minus"></i></button></form>
+    </div>
+
+    <div class="home">
+
+        <div class="box">
+            <div class="insideBox">
+                <form method="post" id="escape"><button type="submit"><i class="fa-solid fa-minimize"></i></button></form>
+                <form method="post" id="desktop"><button type="submit"><i class="fa-solid fa-download"></i></i></button></form>
+                <form method="post" id="fullScreen"><button type="submit"><i class="fa-solid fa-expand"></i></button></form>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="insideBox">
+                <form method="post" id="one"><button type="submit"><i class="fa-solid fa-1"></i></button></form>
+                <form method="post" id="two"><button type="submit"><i class="fa-solid fa-2"></i></button></form>
+                <form method="post" id="three"><button type="submit"><i class="fa-solid fa-3"></i></button></form>
+                <form method="post" id="four"><button type="submit"><i class="fa-solid fa-4"></i></button></form>
+                <form method="post" id="nextTab"><button type="submit"><i class="fa-solid fa-arrow-right"></i></button></form>
+            </div>
+
+            <div class="insideBox">
+                <form method="post" id="youTubeButton"><button type="submit"><i class="fa-brands fa-youtube"></i></button></form>
+                <form method="post" id="googleChromeButton"><button type="submit"><i class="fa-brands fa-google"></i></button></form>
+                <form method="post" id="fMoviesButton"><button type="submit"><i class="fa-solid fa-f"></i></button></form>
+                <form method="post" id="netflixButton"><button type="submit"><i class="fa-solid fa-n"></i></button></form>
+                <form method="post" id="primeVideosButton"><button type="submit"><i class="fa-solid fa-p"></i></button></form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="youTube">
+
+        <div class="insideBox">
+            <div class="search">
+                <input type="text" class="searchInput searchInputYT" id="searchInputYT" placeholder="Search...">
+                <form method="post" id="searchYouTube"><button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button></form>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="insideBox">
+                <form method="post" id="newTabYT"><button type="submit"><i class="fa-solid fa-plus"></i></i></button></form>
+                <form method="post" id="escapeYT"><button type="submit"><i class="fa-solid fa-minimize"></i></button></form>
+                <form method="post" id="volUpYT"><button type="submit"><i class="fa-solid fa-volume-high"></i></button></form>
+                <form method="post" id="goBackYT"><button type="submit"><i class="fa-solid fa-house"></i></button></form>
+            </div>
+
+            <div class="insideBox">
+                <form method="post" id="iButtonYT"><button type="submit"><i class="fa-solid fa-info"></i></button></form>
+                <form method="post" id="fullScreenYT"><button type="submit"><i class="fa-solid fa-expand"></i></button></form>
+                <form method="post" id="volDownYT"><button type="submit"><i class="fa-solid fa-volume-low"></i></button></form>
+                <form method="post" id="saveMusicYT"><button type="submit"><i class="fa-solid fa-music"></i></button></form>
+            </div>
+        </div>
+    </div>
+
+    <div class="googleChrome">
+
+        <div class="insideBox">
+            <div class="search">
+                <input type="text" class="searchInput searchInputGC" id="searchInputGC" placeholder="Search...">
+                <form method="post" id="searchGoogleChrome"><button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button></form>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="insideBox">
+                <form method="post" id="newTabGC"><button type="submit"><i class="fa-solid fa-plus"></i></i></button></form>
+                <form method="post" id="saveLinkGC"><button type="submit"><i class="fa-solid fa-floppy-disk"></i></button></form>
+                <form method="post" id="goBackGC"><button type="submit"><i class="fa-solid fa-house"></i></button></form>
+            </div>
+        </div>
+    </div>
+
+    <div class="fMovies">
+
+        <div class="insideBox">
+            <div class="search">
+                <input type="text" class="searchInput searchInputFM" id="searchInputFM" placeholder="Search...">
+                <form method="post" id="searchFMovies"><button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button></form>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="insideBox">
+                <form method="post" id="newTabFM"><button type="submit"><i class="fa-solid fa-plus"></i></i></button></form>
+                <form method="post" id="click1FM"><button type="submit"><i class="fa-solid fa-computer-mouse"></i></button></form>
+                <form method="post" id="volUpFM"><button type="submit"><i class="fa-solid fa-volume-high"></i></button></form>
+                <form method="post" id="goBackFM"><button type="submit"><i class="fa-solid fa-house"></i></button></form>
+            </div>
+
+            <div class="insideBox">
+                <form method="post" id="startFM"><button type="submit"><i class="fa-solid fa-arrow-left"></i></button></form>
+                <form method="post" id="click2FM"><button type="submit"><i class="fa-solid fa-computer-mouse"></i></button></form>
+                <form method="post" id="volDownFM"><button type="submit"><i class="fa-solid fa-volume-low"></i></button></form>
+                <form method="post" id="fullScreenFM"><button type="submit"><i class="fa-solid fa-expand"></i></button></form>
+            </div>
+        </div>
+    </div>
+
+    <div class="netflix">
+
+        <div class="insideBox">
+            <div class="search">
+                <input type="text" class="searchInput searchInputN" id="searchInputN" placeholder="Search...">
+                <form method="post" id="searchNetflix"><button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button></form>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="insideBox">
+                <form method="post" id="newTabN"><button type="submit"><i class="fa-solid fa-plus"></i></i></button></form>
+                <form method="post" id="volUpN"><button type="submit"><i class="fa-solid fa-volume-high"></i></button></form>
+                <form method="post" id="goBackN"><button type="submit"><i class="fa-solid fa-house"></i></button></form>
+            </div>
+
+            <div class="insideBox">
+                <form method="post" id="skipIntroN"><button type="submit"><i class="fa-solid fa-forward"></i></button></form>
+                <form method="post" id="volDownN"><button type="submit"><i class="fa-solid fa-volume-low"></i></button></form>
+                <form method="post" id="fullScreenN"><button type="submit"><i class="fa-solid fa-expand"></i></button></form>
+            </div>
+        </div>
+    </div>
+
+    <div class="primeMovies">
+
+        <div class="insideBox">
+            <div class="search">
+                <input type="text" class="searchInput searchInputAP" id="searchInputAP" placeholder="Search...">
+                <form method="post" id="searchPrime"><button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button></form>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="insideBox">
+                <form method="post" id="newTabAP"><button type="submit"><i class="fa-solid fa-plus"></i></i></button></form>
+                <form method="post" id="volUpAP"><button type="submit"><i class="fa-solid fa-volume-high"></i></button></form>
+                <form method="post" id="goBackAP"><button type="submit"><i class="fa-solid fa-house"></i></button></form>
+            </div>
+
+            <div class="insideBox">
+                <form method="post" id="startAP"><button type="submit"><i class="fa-solid fa-arrow-left"></i></button></form>
+                <form method="post" id="fullScreenAP"><button type="submit"><i class="fa-solid fa-expand"></i></button></form>
+                <form method="post" id="volDownAP"><button type="submit"><i class="fa-solid fa-volume-low"></i></button></form>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="insideBox">
+            <form method="post" id="scrollUpMain"><button type="submit"><i class="fa-solid fa-arrow-up"></i></button></form>
+            <form method="post" id="clickMain"><button type="submit"><i class="fa-solid fa-computer-mouse"></i></button></form>
+            <form method="post" id="moveUpMain"><button type="submit"><i class="fa-solid fa-arrow-up"></i></button></form>
+            <form method="post" id="closeTabMain"><button type="submit"><i class="fa-solid fa-x"></i></button></form>
+            <form method="post" id="refreshMain"><button type="submit"><i class="fa-solid fa-arrows-rotate"></i></button></form>
+        </div>
+
+        <div class="insideBox">
+            <form method="post" id="scrollDownMain"><button type="submit"><i class="fa-solid fa-arrow-down"></i></button></form>
+            <form method="post" id="moveleftMain"><button type="submit"><i class="fa-solid fa-arrow-left"></i></button></form>
+            <form method="post" id="movedownMain"><button type="submit"><i class="fa-solid fa-arrow-down"></i></button></form>
+            <form method="post" id="moverightMain"><button type="submit"><i class="fa-solid fa-arrow-right"></i></button></form>
+            <form method="post" id="goBackMain"><button type="submit"><i class="fa-solid fa-arrow-left"></i></button></form>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        
+        // MAIN TOP
+        $(document).on('submit', '#volumeIncrease', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "volumeIncrease"}})});
+        
+        $(document).on('submit', '#previousTrack', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "previousTrack"}})});
+        $(document).on('submit', '#backSeek', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "backSeek"}})});
+        $(document).on('submit', '#pause', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "pause"}})});
+        $(document).on('submit', '#forwardSeek', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "forwardSeek"}})});
+        $(document).on('submit', '#nextTrack', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "nextTrack"}})});
+        
+        $(document).on('submit', '#volumeDecrease', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "volumeDecrease"}})});
+        
+
+        // HOME
+        $(document).on('submit', '#escape', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "escape"}})});
+        $(document).on('submit', '#desktop', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "desktop"}})});
+        $(document).on('submit', '#fullScreen', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "fullScreen"}})});
+        
+        $(document).on('submit', '#one', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "one"}})});
+        $(document).on('submit', '#two', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "two"}})});
+        $(document).on('submit', '#three', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "three"}})});
+        $(document).on('submit', '#four', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "four"}})});
+        $(document).on('submit', '#nextTab', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "nextTab"}})});
+        
+        $(document).on('submit', '#youTubeButton', function(e) {
+            e.preventDefault();
+            $(".primeMovies").css("display", "none");
+            $(".netflix").css("display", "none");
+            $(".fMovies").css("display", "none");
+            $(".googleChrome").css("display", "none");
+            $(".youTube").css("display", "flex");
+            $(".home").css("display", "none");
+            $("html").css("background", "var(--youTube)");
+            $("body").css("background", "var(--youTube)");
+            $(".search").css("color", "var(--youTubeText)");
+            $(".searchInput").css("color", "var(--youTubeText)");
+            $("button").css("color", "var(--youTubeText)");
+            $("button").css("background", "var(--youTubeButton)");
+            $("button").css("box-shadow", "0.3rem 0.3rem 0.6rem var(--youTubeBoxShaddow), -0.2rem -0.2rem 0.5rem var(--white);");
+            $(".search").css("box-shadow", "0.3rem 0.3rem 0.6rem var(--youTubeBoxShaddow), -0.2rem -0.2rem 0.5rem var(--white);");
+            $(".searchInput").css("box-shadow", "0.3rem 0.3rem 0.6rem var(--youTubeBoxShaddow), -0.2rem -0.2rem 0.5rem var(--white);");
+        });
+        $(document).on('submit', '#googleChromeButton', function(e) {
+            e.preventDefault();
+            $(".primeMovies").css("display", "none");
+            $(".netflix").css("display", "none");
+            $(".fMovies").css("display", "none");
+            $(".googleChrome").css("display", "flex");
+            $(".youTube").css("display", "none");
+            $(".home").css("display", "none");
+            $("html").css("background", "var(--googleChrome)");
+            $("body").css("background", "var(--googleChrome)");
+            $(".search").css("color", "var(--googleChromeText)");
+            $(".searchInput").css("color", "var(--googleChromeText)");
+            $("button").css("color", "var(--googleChromeText)");
+            $("button").css("background", "var(--googleChromeButton)");
+            $("button").css("box-shadow", "0.3rem 0.3rem 0.6rem var(--googleChromeBoxShaddow), -0.2rem -0.2rem 0.5rem var(--white);");
+            $(".search").css("box-shadow", "0.3rem 0.3rem 0.6rem var(--googleChromeBoxShaddow), -0.2rem -0.2rem 0.5rem var(--white);");
+            $(".searchInput").css("box-shadow", "0.3rem 0.3rem 0.6rem var(--googleChromeBoxShaddow), -0.2rem -0.2rem 0.5rem var(--white);");
+        });
+        $(document).on('submit', '#fMoviesButton', function(e) {
+            e.preventDefault();
+            $(".primeMovies").css("display", "none");
+            $(".netflix").css("display", "none");
+            $(".fMovies").css("display", "flex");
+            $(".googleChrome").css("display", "none");
+            $(".youTube").css("display", "none");
+            $(".home").css("display", "none");
+            $("html").css("background", "var(--fMovies)");
+            $("body").css("background", "var(--fMovies)");
+            $(".search").css("color", "var(--fMoviesText)");
+            $(".searchInput").css("color", "var(--fMoviesText)");
+            $("button").css("color", "var(--fMoviesText)");
+            $("button").css("background", "var(--fMoviesButton)");
+            $("button").css("box-shadow", "0.3rem 0.3rem 0.6rem var(--fMoviesBoxShaddow), -0.2rem -0.2rem 0.5rem var(--white);");
+            $(".search").css("box-shadow", "0.3rem 0.3rem 0.6rem var(--fMoviesBoxShaddow), -0.2rem -0.2rem 0.5rem var(--white);");
+            $(".searchInput").css("box-shadow", "0.3rem 0.3rem 0.6rem var(--fMoviesBoxShaddow), -0.2rem -0.2rem 0.5rem var(--white);");
+        });
+        $(document).on('submit', '#netflixButton', function(e) {
+            e.preventDefault();
+            $(".primeMovies").css("display", "none");
+            $(".netflix").css("display", "flex");
+            $(".fMovies").css("display", "none");
+            $(".googleChrome").css("display", "none");
+            $(".youTube").css("display", "none");
+            $(".home").css("display", "none");
+            $("html").css("background", "var(--netflix)");
+            $("body").css("background", "var(--netflix)");
+            $(".search").css("color", "var(--netflixText)");
+            $(".searchInput").css("color", "var(--netflixText)");
+            $("button").css("color", "var(--netflixText)");
+            $("button").css("background", "var(--netflixButton)");
+            $("button").css("box-shadow", "0.3rem 0.3rem 0.6rem var(--netflixBoxShaddow), -0.2rem -0.2rem 0.5rem var(--white);");
+            $(".search").css("box-shadow", "0.3rem 0.3rem 0.6rem var(--netflixBoxShaddow), -0.2rem -0.2rem 0.5rem var(--white);");
+            $(".searchInput").css("box-shadow", "0.3rem 0.3rem 0.6rem var(--netflixBoxShaddow), -0.2rem -0.2rem 0.5rem var(--white);");
+        });
+        $(document).on('submit', '#primeVideosButton', function(e) {
+            e.preventDefault();
+            $(".primeMovies").css("display", "flex");
+            $(".netflix").css("display", "none");
+            $(".fMovies").css("display", "none");
+            $(".googleChrome").css("display", "none");
+            $(".youTube").css("display", "none");
+            $(".home").css("display", "none");
+            $("html").css("background", "var(--primeVideos)");
+            $("body").css("background", "var(--primeVideos)");
+            $(".search").css("color", "var(--primeVideosText)");
+            $(".searchInput").css("color", "var(--primeVideosText)");
+            $("button").css("color", "var(--primeVideosText)");
+            $("button").css("background", "var(--primeVideosButton)");
+            $("button").css("box-shadow", "0.3rem 0.3rem 0.6rem var(--primeVideosBoxShaddow), -0.2rem -0.2rem 0.5rem var(--white);");
+            $(".search").css("box-shadow", "0.3rem 0.3rem 0.6rem var(--primeVideosBoxShaddow), -0.2rem -0.2rem 0.5rem var(--white);");
+            $(".searchInput").css("box-shadow", "0.3rem 0.3rem 0.6rem var(--primeVideosBoxShaddow), -0.2rem -0.2rem 0.5rem var(--white);");
+        });
+        
+        
+        // YOUTUBE
+        $(document).on('submit', '#searchYouTube', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "searchYouTube", searchData: $("#searchInputYT").val()}})});
+        $(document).on('submit', '#newTabYT', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "newTabYT"}})});
+        $(document).on('submit', '#escapeYT', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "escapeYT"}})});
+        $(document).on('submit', '#volUpYT', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "volUpYT"}})});
+        $(document).on('submit', '#goBackYT', function(e) {
+            e.preventDefault();
+            $(".primeMovies").css("display", "none");
+            $(".netflix").css("display", "none");
+            $(".fMovies").css("display", "none");
+            $(".googleChrome").css("display", "none");
+            $(".youTube").css("display", "none");
+            $(".home").css("display", "flex");
+            $("html").css("background", "var(--main)");
+            $("body").css("background", "var(--main)");
+            $(".search").css("color", "var(--mainText)");
+            $(".searchInput").css("color", "var(--mainText)");
+            $("button").css("background", "var(--main)");
+        });
+        $(document).on('submit', '#iButtonYT', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "iButtonYT"}})});
+        $(document).on('submit', '#fullScreenYT', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "fullScreenYT"}})});
+        $(document).on('submit', '#volDownYT', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "volDownYT"}})});
+        $(document).on('submit', '#saveMusicYT', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "saveMusicYT"}})});        
+
+
+        // GOOGLE
+        $(document).on('submit', '#searchGoogleChrome', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "searchGoogleChrome", searchData: $("#searchInputGC").val()}})});
+        $(document).on('submit', '#newTabGC', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "newTabGC"}})});
+        $(document).on('submit', '#saveLinkGC', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "saveLinkGC"}})});
+        $(document).on('submit', '#goBackGC', function(e) {
+            e.preventDefault();
+            $(".primeMovies").css("display", "none");
+            $(".netflix").css("display", "none");
+            $(".fMovies").css("display", "none");
+            $(".googleChrome").css("display", "none");
+            $(".youTube").css("display", "none");
+            $(".home").css("display", "flex");
+            $("html").css("background", "var(--main)");
+            $("body").css("background", "var(--main)");
+            $(".search").css("color", "var(--mainText)");
+            $(".searchInput").css("color", "var(--mainText)");
+            $("button").css("background", "var(--main)");
+        });
+        
+        
+        // FMOVIES
+        $(document).on('submit', '#searchFMovies', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "searchFMovies", searchData: $("#searchInputFM").val()}})});
+        $(document).on('submit', '#newTabFM', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "newTabFM"}})});
+        $(document).on('submit', '#click1FM', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "click1FM"}})});
+        $(document).on('submit', '#volUpFM', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "volUpFM"}})});
+        $(document).on('submit', '#goBackFM', function(e) {
+            e.preventDefault();
+            $(".primeMovies").css("display", "none");
+            $(".netflix").css("display", "none");
+            $(".fMovies").css("display", "none");
+            $(".googleChrome").css("display", "none");
+            $(".youTube").css("display", "none");
+            $(".home").css("display", "flex");
+            $("html").css("background", "var(--main)");
+            $("body").css("background", "var(--main)");
+            $(".search").css("color", "var(--mainText)");
+            $(".searchInput").css("color", "var(--mainText)");
+            $("button").css("background", "var(--main)");
+        });
+        $(document).on('submit', '#startFM', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "searchFMovies", searchData: $("#searchInputFM").val()}})});
+        $(document).on('submit', '#click2FM', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "click2FM"}})});
+        $(document).on('submit', '#fullScreenFM', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "fullScreenFM"}})});
+        $(document).on('submit', '#volDownFM', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "volDownFM"}})});
+
+
+        // NETFLIX
+        $(document).on('submit', '#searchNetflix', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "searchNetflix", searchData: $("#searchInputN").val()}})});
+        $(document).on('submit', '#newTabN', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "newTabN"}})});
+        $(document).on('submit', '#volUpN', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "volUpN"}})});
+        $(document).on('submit', '#goBackN', function(e) {
+            e.preventDefault();
+            $(".primeMovies").css("display", "none");
+            $(".netflix").css("display", "none");
+            $(".fMovies").css("display", "none");
+            $(".googleChrome").css("display", "none");
+            $(".youTube").css("display", "none");
+            $(".home").css("display", "flex");
+            $("html").css("background", "var(--main)");
+            $("body").css("background", "var(--main)");
+            $(".search").css("color", "var(--mainText)");
+            $(".searchInput").css("color", "var(--mainText)");
+            $("button").css("background", "var(--main)");
+        });
+        $(document).on('submit', '#skipIntroN', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "skipIntroN"}})});
+        $(document).on('submit', '#volDownN', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "volDownN"}})});
+        $(document).on('submit', '#fullScreenN', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "fullScreenN"}})});
+
+
+        // PRIME MOVIES
+        $(document).on('submit', '#searchPrime', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "searchPrime", searchData: $("#searchInputAP").val()}})});
+        $(document).on('submit', '#newTabAP', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "newTabAP"}})});
+        $(document).on('submit', '#volUpAP', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "volUpAP"}})});
+        $(document).on('submit', '#goBackAP', function(e) {
+            e.preventDefault();
+            $(".primeMovies").css("display", "none");
+            $(".netflix").css("display", "none");
+            $(".fMovies").css("display", "none");
+            $(".googleChrome").css("display", "none");
+            $(".youTube").css("display", "none");
+            $(".home").css("display", "flex");
+            $("html").css("background", "var(--main)");
+            $("body").css("background", "var(--main)");
+            $(".search").css("color", "var(--mainText)");
+            $(".searchInput").css("color", "var(--mainText)");
+            $("button").css("background", "var(--main)");
+        });
+        $(document).on('submit', '#startAP', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "startAP"}})});
+        $(document).on('submit', '#fullScreenAP', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "fullScreenAP"}})});
+        $(document).on('submit', '#volDownAP', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "volDownAP"}})});
+
+
+        // MAIN BOTTOM
+        $(document).on('submit', '#scrollUpMain', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "scrollUpMain"}})});
+        $(document).on('submit', '#clickMain', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "clickMain"}})});
+        $(document).on('submit', '#moveUpMain', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "moveUpMain"}})});
+        $(document).on('submit', '#closeTabMain', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "closeTabMain"}})});
+        $(document).on('submit', '#refreshMain', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "refreshMain"}})});
+        $(document).on('submit', '#scrollDownMain', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "scrollDownMain"}})});
+        $(document).on('submit', '#moveleftMain', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "moveleftMain"}})});
+        $(document).on('submit', '#movedownMain', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "movedownMain"}})});
+        $(document).on('submit', '#moverightMain', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "moverightMain"}})});
+        $(document).on('submit', '#goBackMain', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "goBackMain"}})});
+    
+    </script>
+
+
+</body>
+</html>
