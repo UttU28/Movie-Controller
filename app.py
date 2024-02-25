@@ -2,11 +2,11 @@ import socket
 hostname = socket.gethostname()
 IPAddr = socket.gethostbyname(hostname)
 
-from notify_run import Notify
-notify = Notify(endpoint="https://notify.run/R3EV6hx0dLPXxiDF73KD")
-notify.send("Click to control videos!", "http://{}:5000/".format(IPAddr))
-
-
+# from notify_run import Notify
+# notify = Notify(endpoint="https://notify.run/R3EV6hx0dLPXxiDF73KD")
+# notify.send("Click to control videos!", "http://{}:5000/".format(IPAddr))
+import io
+import qrcode
 from flask import Flask, render_template, request
 from aMainTopFunctions import *
 from bHomeFunctions import *
@@ -16,6 +16,7 @@ from eFMoviesFunctions import *
 from fPrimeVideosFunctions import *
 from gNetflixFunctions import *
 from hMainBottomFunctions import *
+from iMainBottomController import *
 
 
 app = Flask(__name__)
@@ -159,6 +160,17 @@ def home():
         elif functionName == "goBackMain":
             goBackMain()
 
+        elif functionName == "clickMainController":
+            clickMainController()
+        elif functionName == "moveupMainController":
+            moveUpMainController()
+        elif functionName == "moveleftMainController":
+            moveleftMainController()
+        elif functionName == "movedownMainController":
+            movedownMainController()
+        elif functionName == "moverightMainController":
+            moverightMainController()
+
 
 
         print(functionName)
@@ -167,4 +179,10 @@ def home():
 
 if __name__ == "__main__":
     # app.run(debug=True)
+    qr = qrcode.QRCode()
+    qr.add_data(f"http://{IPAddr}:5000/")
+    f = io.StringIO()
+    qr.print_ascii(out=f)
+    f.seek(0)
+    print(f.read())
     app.run(host="0.0.0.0")

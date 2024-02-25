@@ -194,6 +194,21 @@
         </div>
     </div>
 
+    <div class="insideBox">
+        <form method="post" id="moveupMainController"><button type="submit"><i class="fa-solid fa-chevron-up"></i></i></button>
+        </form>
+    </div>
+
+    <div class="insideBox">
+        <form method="post" id="moveleftMainController"><button type="submit"><i class="fa-solid fa-chevron-left"></i></i></button></form>
+        <form method="post" id="clickMainController"><button type="submit"><i class="fa-solid fa-circle"></i></i></button></form>
+        <form method="post" id="moverightMainController"><button type="submit"><i class="fa-solid fa-chevron-right"></i></i></button></form>
+    </div>
+
+    <div class="insideBox">
+        <form method="post" id="movedownMainController"><button type="submit"><i class="fa-solid fa-chevron-down"></i></i></button></form>
+    </div>
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script type="text/javascript">
@@ -441,6 +456,13 @@
         $(document).on('submit', '#moverightMain', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "moverightMain"}})});
         $(document).on('submit', '#goBackMain', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "goBackMain"}})});
     
+
+        // MAIN CONTROLLER
+        $(document).on('submit', '#clickMainController', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "clickMainController"}})});
+        $(document).on('submit', '#moveupMainController', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "moveupMainController"}})});
+        $(document).on('submit', '#moveleftMainController', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "moveleftMainController"}})});
+        $(document).on('submit', '#movedownMainController', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "movedownMainController"}})});
+        $(document).on('submit', '#moverightMainController', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "moverightMainController"}})});
     </script>
 
 

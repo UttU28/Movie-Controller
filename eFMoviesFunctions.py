@@ -1,19 +1,18 @@
 import pyautogui as py
 
 def searchFMovies(searchData):
-    py.click(1110, 110)
     py.keyDown('ctrl')
-    py.press('a')
+    py.press('l')
     py.keyUp('ctrl')
-    py.press('backspace')
-    py.typewrite(searchData)
+    py.typewrite(f'https://fmoviesz.to/filter?keyword={"+".join(searchData.strip().split(" "))}')
     py.press('enter')
+    # py.typewrite(searchData)
 
 def newTabFM():
     py.keyDown('ctrl')
     py.press('t')
     py.keyUp('ctrl')
-    py.typewrite('https://fmovies.app/')
+    py.typewrite('https://fmoviesz.to/home')
     py.press('enter')
 
 def click1FM():
