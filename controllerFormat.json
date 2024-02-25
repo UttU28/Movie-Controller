@@ -1,0 +1,21 @@
+{
+    "insideBox": {
+        "volumeIncrease": {
+            "icon": "fa-solid fa-plus",
+            "text": "VOL +"
+        }
+    },
+    "insideBox1":{
+        "className": "home",
+        "boxes": {
+            "className": "box",
+            "insideBox": {
+            "forms": [
+                {"method": "post", "id": "escape", "button": {"type": "submit", "icon": "fa-minimize"}},
+                {"method": "post", "id": "desktop", "button": {"type": "submit", "icon": "fa-download"}},
+                {"method": "post", "id": "fullScreen", "button": {"type": "submit", "icon": "fa-expand"}}
+            ]
+            }
+        }
+    }
+}

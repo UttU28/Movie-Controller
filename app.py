@@ -8,15 +8,16 @@ IPAddr = socket.gethostbyname(hostname)
 import io
 import qrcode
 from flask import Flask, render_template, request
-from aMainTopFunctions import *
-from bHomeFunctions import *
-from cYouTubeFunctions import *
-from dGoogleChromeFunctions import *
-from eFMoviesFunctions import *
-from fPrimeVideosFunctions import *
-from gNetflixFunctions import *
-from hMainBottomFunctions import *
-from iMainBottomController import *
+from defaultFunctions.topFunctions import *
+from defaultFunctions.homeFunctions import *
+from siteFunctions.youTubeFunctions import *
+from siteFunctions.googleChromeFunctions import *
+from siteFunctions.fMoviesFunctions import *
+from siteFunctions.iBommaFunctions import *
+from siteFunctions.primeVideosFunctions import *
+from siteFunctions.netflixFunctions import *
+from defaultFunctions.bottomFunctions import *
+from defaultFunctions.controller import *
 
 
 app = Flask(__name__)
@@ -48,14 +49,14 @@ def home():
             desktop()
         elif functionName == "fullScreen":
             fullScreen()
+        elif functionName == "prevTab":
+            prevTab()
         elif functionName == "one":
             one()
         elif functionName == "two":
             two()
         elif functionName == "three":
             three()
-        elif functionName == "four":
-            four()
         elif functionName == "nextTab":
             nextTab()
 
@@ -107,6 +108,25 @@ def home():
             fullScreenFM()
         elif functionName == "volDownFM":
             volDownFM()
+
+
+        elif functionName == "searchIBomma":
+            searchData = request.form.get("searchData")
+            searchIBomma(searchData)
+        elif functionName == "newTabIB":
+            newTabIB()
+        elif functionName == "click1IB":
+            click1IB()
+        elif functionName == "volUpIB":
+            volUpIB()
+        elif functionName == "startIB":
+            startIB()
+        elif functionName == "click2IB":
+            click2IB()
+        elif functionName == "fullScreenIB":
+            fullScreenIB()
+        elif functionName == "volDownIB":
+            volDownIB()
 
 
         elif functionName == "searchNetflix":
