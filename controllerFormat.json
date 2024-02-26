@@ -1,21 +1,157 @@
 {
-    "insideBox": {
-        "volumeIncrease": {
-            "icon": "fa-solid fa-plus",
-            "text": "VOL +"
-        }
-    },
-    "insideBox1":{
-        "className": "home",
-        "boxes": {
-            "className": "box",
-            "insideBox": {
-            "forms": [
-                {"method": "post", "id": "escape", "button": {"type": "submit", "icon": "fa-minimize"}},
-                {"method": "post", "id": "desktop", "button": {"type": "submit", "icon": "fa-download"}},
-                {"method": "post", "id": "fullScreen", "button": {"type": "submit", "icon": "fa-expand"}}
-            ]
-            }
-        }
-    }
+    "always1": [
+        [
+            "volumeIncrease"
+        ],
+        [
+            "previousTrack",
+            "backSeek",
+            "pause",
+            "forwardSeek",
+            "nextTrack"
+        ],
+        [
+            "volumeDecrease"
+        ]
+    ],
+    "home": [
+        [
+            "escape",
+            "desktop",
+            "fullScreen"
+        ],
+        [
+            "prevTab",
+            "one",
+            "two",
+            "three",
+            "nextTab"
+        ],
+        [
+            "youTubeButton",
+            "googleChromeButton",
+            "fMoviesButton",
+            "iBommaButton",
+            "netflixButton",
+            "primeVideosButton"
+        ]
+    ],
+    "youTube": [
+        [
+            "searchYouTube"
+        ],
+        [
+            "newTabYT",
+            "escapeYT",
+            "volUpYT",
+            "goBackYT"
+        ],
+        [
+            "iButtonYT",
+            "fullScreenYT",
+            "volDownYT",
+            "saveMusicYT"
+        ]
+    ],
+    "googleChrome": [
+        [
+            "searchGoogleChrome"
+        ],
+        [
+            "newTabGC",
+            "saveLinkGC",
+            "goBackGC"
+        ]
+    ],
+    "fMovies": [
+        [
+            "searchFMovies"
+        ],
+        [
+            "newTabFM",
+            "click1FM",
+            "volUpFM",
+            "goBackFM"
+        ],
+        [
+            "startFM",
+            "click2FM",
+            "volDownFM",
+            "fullScreenFM"
+        ]
+    ],
+    "iBomma": [
+        [
+            "searchIBomma"
+        ],
+        [
+            "newTabIB",
+            "click1IB",
+            "volUpIB",
+            "goBackIB"
+        ],
+        [
+            "startIB",
+            "click2IB",
+            "volDownIB",
+            "fullScreenIB"
+        ]
+    ],
+    "netflix": [
+        [
+            "searchNetflix"
+        ],
+        [
+            "newTabN",
+            "volUpN",
+            "goBackN"
+        ],
+        [
+            "skipIntroN",
+            "volDownN",
+            "fullScreenN"
+        ]
+    ],
+    "primeVideos": [
+        [
+            "searchPrime"
+        ],
+        [
+            "newTabAP",
+            "volUpAP",
+            "goBackAP"
+        ],
+        [
+            "startAP",
+            "fullScreenAP",
+            "volDownAP"
+        ]
+    ],
+    "always2": [
+        [
+            "scrollUpMain",
+            "clickMain",
+            "moveUpMain",
+            "closeTabMain",
+            "refreshMain"
+        ],
+        [
+            "scrollDownMain",
+            "moveleftMain",
+            "movedownMain",
+            "moverightMain",
+            "moveBackMain"
+        ],
+        [
+            "moveupMainController"
+        ],
+        [
+            "moveleftMainController",
+            "clickMainController",
+            "moverightMainController"
+        ],
+        [
+            "movedownMainController"
+        ]
+    ]
 }

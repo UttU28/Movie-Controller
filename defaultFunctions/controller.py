@@ -3,7 +3,7 @@ import pyautogui as py
 def clickMainController():
     py.click()
 
-def moveUpMainController():
+def moveupMainController():
     x,y = py.position()
     py.moveTo(x,y-100)
 

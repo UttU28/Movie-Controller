@@ -21,6 +21,11 @@
     --fMoviesText: #28282B;
     --fMoviesBoxShaddow: #cac8e7;
 
+    --iBomma: #515457;
+    --iBommaButton: #515457;
+    --iBommaText: #28282B;
+    --iBommaBoxShaddow: #cac8e7;
+
     --netflix: #515457;
     --netflixButton: #515457;
     --netflixText: #28282B;
@@ -33,7 +38,7 @@
 
 }
 
-html, body, .home {
+html, body, .home, .remoteController {
     /* height: 100%; */
     width: 100%;
     background: var(--main);
@@ -45,16 +50,23 @@ html {
     margin: auto;
 }
 
-body, .home, .youTube, .fMovies, .netflix, .primeMovies, .googleChrome {
+.remoteController{
+    display: flex;
+    flex-direction: column;
+}
+
+body, .home, .always1, .always2, .youTube, .fMovies, .iBomma, .netflix, .primeVideos, .googleChrome {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+    margin-bottom: 0.7rem;
 }
 
 .youTube{background: var(--youTube); display: none;}
 .fMovies{background: var(--fMovies); display: none;}
+.iBomma{background: var(--iBomma); display: none;}
 .netflix{background: var(--netflix); display: none;}
-.primeMovies{background: var(--primeMovies); display: none;}
+.primeVideos{background: var(--primeVideos); display: none;}
 .googleChrome{background: var(--googleChrome); display: none;}
 
 img{

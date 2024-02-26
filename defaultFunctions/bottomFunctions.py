@@ -33,7 +33,7 @@ def moverightMain():
     x,y = py.position()
     py.moveTo(x+20,y)
 
-def goBackMain():
+def moveBackMain():
     py.keyDown('alt')
     py.press('left')
     py.keyUp('alt')

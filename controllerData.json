@@ -1,0 +1,326 @@
+{
+    "volumeIncrease": {
+        "icon": "fa-solid fa-plus",
+        "text": "VOL +"
+    },
+    "previousTrack": {
+        "icon": "fa-solid fa-backward",
+        "text": "PREV"
+    },
+    "backSeek": {
+        "icon": "fa-solid fa-rotate-left",
+        "text": "- 10"
+    },
+    "pause": {
+        "icon": "fa-solid fa-pause",
+        "text": "PAUSE"
+    },
+    "forwardSeek": {
+        "icon": "fa-solid fa-rotate-right",
+        "text": "+ 10"
+    },
+    "nextTrack": {
+        "icon": "fa-solid fa-forward",
+        "text": "NEXT"
+    },
+    "volumeDecrease": {
+        "icon": "fa-solid fa-minus",
+        "text": "VOL -"
+    },
+    "escape": {
+        "icon": "fa-solid fa-minimize",
+        "text": "ALT TAB"
+    },
+    "desktop": {
+        "icon": "fa-solid fa-download",
+        "text": "WIN + D"
+    },
+    "fullScreen": {
+        "icon": "fa-solid fa-expand",
+        "text": "FULL SCREEN"
+    },
+    "prevTab": {
+        "icon": "fa-solid fa-arrow-left",
+        "text": "- TAB"
+    },
+    "one": {
+        "icon": "fa-solid fa-1",
+        "text": "TAB 1"
+    },
+    "two": {
+        "icon": "fa-solid fa-2",
+        "text": "TAB 2"
+    },
+    "three": {
+        "icon": "fa-solid fa-3",
+        "text": "TAB 3"
+    },
+    "nextTab": {
+        "icon": "fa-solid fa-arrow-right",
+        "text": "TAB +"
+    },
+    "youTubeButton": {
+        "icon": "fa-brands fa-youtube",
+        "text": "YOUTUBE"
+    },
+    "googleChromeButton": {
+        "icon": "fa-brands fa-google",
+        "text": "GOOGLE"
+    },
+    "fMoviesButton": {
+        "icon": "fa-solid fa-f",
+        "text": "FMOVIES"
+    },
+    "iBommaButton": {
+        "icon": "fa-solid fa-b",
+        "text": "IBOMMA"
+    },
+    "netflixButton": {
+        "icon": "fa-solid fa-n",
+        "text": "NETFLIX"
+    },
+    "primeVideosButton": {
+        "icon": "fa-solid fa-p",
+        "text": "PRIME"
+    },
+    "searchYouTube": {
+        "icon": "fa-solid fa-magnifying-glass",
+        "text": "SEARCH"
+    },
+    "newTabYT": {
+        "icon": "fa-solid fa-plus",
+        "text": "OPEN YT"
+    },
+    "escapeYT": {
+        "icon": "fa-solid fa-minimize",
+        "text": "sdv"
+    },
+    "volUpYT": {
+        "icon": "fa-solid fa-volume-high",
+        "text": "VOL +"
+    },
+    "goBackYT": {
+        "icon": "fa-solid fa-house",
+        "text": "HOME"
+    },
+    "iButtonYT": {
+        "icon": "fa-solid fa-info",
+        "text": "I-MODE"
+    },
+    "fullScreenYT": {
+        "icon": "fa-solid fa-expand",
+        "text": "FULL SCREEN"
+    },
+    "volDownYT": {
+        "icon": "fa-solid fa-volume-low",
+        "text": "VOL -"
+    },
+    "saveMusicYT": {
+        "icon": "fa-solid fa-music",
+        "text": "sdv"
+    },
+    "searchGoogleChrome": {
+        "icon": "fa-solid fa-magnifying-glass",
+        "text": "SEARCH"
+    },
+    "newTabGC": {
+        "icon": "fa-solid fa-plus",
+        "text": "OPEN GC"
+    },
+    "saveLinkGC": {
+        "icon": "fa-solid fa-floppy-disk",
+        "text": "sdv"
+    },
+    "goBackGC": {
+        "icon": "fa-solid fa-house",
+        "text": "HOME"
+    },
+    "searchFMovies": {
+        "icon": "fa-solid fa-magnifying-glass",
+        "text": "SEARCH"
+    },
+    "newTabFM": {
+        "icon": "fa-solid fa-plus",
+        "text": "OPEN FM"
+    },
+    "click1FM": {
+        "icon": "fa-solid fa-computer-mouse",
+        "text": "CLICK"
+    },
+    "volUpFM": {
+        "icon": "fa-solid fa-volume-high",
+        "text": "VOL +"
+    },
+    "goBackFM": {
+        "icon": "fa-solid fa-house",
+        "text": "HOME"
+    },
+    "startFM": {
+        "icon": "fa-solid fa-arrow-left",
+        "text": "sdv"
+    },
+    "click2FM": {
+        "icon": "fa-solid fa-computer-mouse",
+        "text": "CLICK"
+    },
+    "volDownFM": {
+        "icon": "fa-solid fa-volume-low",
+        "text": "VOL -"
+    },
+    "fullScreenFM": {
+        "icon": "fa-solid fa-expand",
+        "text": "FULL SCREEN"
+    },
+    "searchIBomma": {
+        "icon": "fa-solid fa-magnifying-glass",
+        "text": "SEARCH"
+    },
+    "newTabIB": {
+        "icon": "fa-solid fa-plus",
+        "text": "OPEN iB"
+    },
+    "click1IB": {
+        "icon": "fa-solid fa-computer-mouse",
+        "text": "CLICK"
+    },
+    "volUpIB": {
+        "icon": "fa-solid fa-volume-high",
+        "text": "VOL +"
+    },
+    "goBackIB": {
+        "icon": "fa-solid fa-house",
+        "text": "HOME"
+    },
+    "startIB": {
+        "icon": "fa-solid fa-arrow-left",
+        "text": "sdv"
+    },
+    "click2IB": {
+        "icon": "fa-solid fa-computer-mouse",
+        "text": "CLICK"
+    },
+    "volDownIB": {
+        "icon": "fa-solid fa-volume-low",
+        "text": "VOL -"
+    },
+    "fullScreenIB": {
+        "icon": "fa-solid fa-expand",
+        "text": "FULL SCREEN"
+    },
+    "searchNetflix": {
+        "icon": "fa-solid fa-magnifying-glass",
+        "text": "SEARCH"
+    },
+    "newTabN": {
+        "icon": "fa-solid fa-plus",
+        "text": "OPEN NFX"
+    },
+    "volUpN": {
+        "icon": "fa-solid fa-volume-high",
+        "text": "VOL +"
+    },
+    "goBackN": {
+        "icon": "fa-solid fa-house",
+        "text": "HOME"
+    },
+    "skipIntroN": {
+        "icon": "fa-solid fa-forward",
+        "text": "SKIP"
+    },
+    "volDownN": {
+        "icon": "fa-solid fa-volume-low",
+        "text": "VOL -"
+    },
+    "fullScreenN": {
+        "icon": "fa-solid fa-expand",
+        "text": "FULL SCREEN"
+    },
+    "searchPrime": {
+        "icon": "fa-solid fa-magnifying-glass",
+        "text": "SEARCH"
+    },
+    "newTabAP": {
+        "icon": "fa-solid fa-plus",
+        "text": "OPEN AP"
+    },
+    "volUpAP": {
+        "icon": "fa-solid fa-volume-high",
+        "text": "VOL +"
+    },
+    "goBackAP": {
+        "icon": "fa-solid fa-house",
+        "text": "HOME"
+    },
+    "startAP": {
+        "icon": "fa-solid fa-arrow-left",
+        "text": "sdv"
+    },
+    "fullScreenAP": {
+        "icon": "fa-solid fa-expand",
+        "text": "FULL SCREEN"
+    },
+    "volDownAP": {
+        "icon": "fa-solid fa-volume-low",
+        "text": "VOL -"
+    },
+    "scrollUpMain": {
+        "icon": "fa-solid fa-arrow-up",
+        "text": "SCROLL"
+    },
+    "clickMain": {
+        "icon": "fa-solid fa-computer-mouse",
+        "text": "CLICK"
+    },
+    "moveUpMain": {
+        "icon": "fa-solid fa-arrow-up",
+        "text": "MOUSE UP"
+    },
+    "closeTabMain": {
+        "icon": "fa-solid fa-x",
+        "text": "CLOSE TAB"
+    },
+    "refreshMain": {
+        "icon": "fa-solid fa-arrows-rotate",
+        "text": "REFRESH"
+    },
+    "scrollDownMain": {
+        "icon": "fa-solid fa-arrow-down",
+        "text": "SCROLL"
+    },
+    "moveleftMain": {
+        "icon": "fa-solid fa-arrow-left",
+        "text": "MOUSE LFT"
+    },
+    "movedownMain": {
+        "icon": "fa-solid fa-arrow-down",
+        "text": "MOUSE DWN"
+    },
+    "moverightMain": {
+        "icon": "fa-solid fa-arrow-right",
+        "text": "MOUSE RIT"
+    },
+    "moveBackMain": {
+        "icon": "fa-solid fa-arrow-left",
+        "text": "BACK"
+    },
+    "moveupMainController": {
+        "icon": "fa-solid fa-chevron-up",
+        "text": " "
+    },
+    "moveleftMainController": {
+        "icon": "fa-solid fa-chevron-left",
+        "text": " "
+    },
+    "clickMainController": {
+        "icon": "fa-solid fa-circle",
+        "text": " "
+    },
+    "moverightMainController": {
+        "icon": "fa-solid fa-chevron-right",
+        "text": " "
+    },
+    "movedownMainController": {
+        "icon": "fa-solid fa-chevron-down",
+        "text": " "
+    }
+}
