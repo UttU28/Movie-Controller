@@ -17,7 +17,7 @@ Movie Controller is a Python bot made using Flask, HTML, CSS, JavaScript, and Ji
 
 ## Installation
 1. Clone the repository:
-   ```git clone https://github.com/yourusername/movie-controller.git```
+   ```git clone https://github.com/UttU28/Movie-Controller.git```
 2. Install the required Python dependencies:
    ```pip install -r requirements.txt```
 3. Run the Python bot:
