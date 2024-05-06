@@ -1,12 +1,10 @@
 import pyautogui as py
 
 def searchNetflix(searchData):
-    py.click(1630, 115)
     py.keyDown('ctrl')
-    py.press('a')
+    py.press('l')
     py.keyUp('ctrl')
-    py.press('backspace')
-    py.typewrite(searchData)
+    py.typewrite(f'https://www.netflix.com/search?q={"%20".join(searchData.strip().split(" "))}')
     py.press('enter')
 
 def newTabN():
