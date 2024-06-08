@@ -37,6 +37,19 @@ def home():
         print(functionName)
     return render_template("index.html", controllerFormat=controllerFormat, controllerData=controllerData)
 
+@app.route("/watch", methods=["POST", "GET"])
+def watch():
+    if request.method == "POST":
+        functionName = request.form.get("functionName")
+        searchData = request.form.get("searchData")
+        
+        functionMapping = {"volumeIncrease": volumeIncrease,"previousTrack": previousTrack,"backSeek": backSeek,"pause": pause,"forwardSeek": forwardSeek,"nextTrack": nextTrack,"volumeDecrease": volumeDecrease,"scrollUpMain": scrollUpMain,"clickMain": clickMain,"moveUpMain": moveUpMain,"closeTabMain": closeTabMain,"refreshMain": refreshMain,"scrollDownMain": scrollDownMain,"moveleftMain": moveleftMain,"movedownMain": movedownMain,"moverightMain": moverightMain,"moveBackMain": moveBackMain}
+        if functionName in functionMapping:
+            functionMapping[functionName]()
+
+        print(functionName)
+    return render_template("watch.html", controllerFormat=controllerFormat, controllerData=controllerData)
+    # return render_template("watch.html")
 
 if __name__ == "__main__":
     # app.run(debug=True)

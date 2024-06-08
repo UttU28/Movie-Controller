@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0225e86616.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <script src="jquery-3.6.1.min.js"></script>
+    <!-- <link rel="stylesheet" href="main.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/watch.css') }}">
+</head>
+<body>
+
+    <div class="box">
+        <div class="insideBox">
+            <form method="post" id="previousTrack"><button type="submit"><i class="fa-solid fa-backward" aria-hidden="true"></i><span>PREV</span></button></form>
+            <form method="post" id="seekControl"><button type="submit"><i class="fa-solid fa-x" aria-hidden="true"></i><span>SEEK</span></button></form>
+            <form method="post" id="pause"><button type="submit"><i class="fa-solid fa-pause" aria-hidden="true"></i><span>PAUSE</span></button></form>
+            <form method="post" id="volumeControl"><button type="submit"><i class="fa-solid fa-x" aria-hidden="true"></i><span>VOL+/-</span></button></form>
+            <form method="post" id="nextTrack"><button type="submit"><i class="fa-solid fa-forward" aria-hidden="true"></i><span>NEXT</span></button></form>
+        </div>
+        
+        <div class="insideBox">
+            <form method="post" id="scrollControl"><button type="submit"><i class="fa-solid fa-arrow-up"></i></button></form>
+            <form method="post" id="clickMain"><button type="submit"><i class="fa-solid fa-computer-mouse"></i></button></form>
+            <form method="post" id="verticalControl"><button type="submit"><i class="fa-solid fa-arrow-up"></i></button></form>
+            <form method="post" id="horizontalControl"><button type="submit"><i class="fa-solid fa-arrow-left"></i></button></form>
+            <form method="post" id="closeTabMain"><button type="submit"><i class="fa-solid fa-x"></i></button></form>
+            <form method="post" id="refreshMain"><button type="submit"><i class="fa-solid fa-arrows-rotate"></i></button></form>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        
+        
+        $(document).ready(function() {
+            var selectedButtonId = null;
+            var scrollTimeout;
+
+            function scrollToMiddle() {
+                temp = selectedButtonId
+                selectedButtonId = null
+                console.log('Scrolling to Middle')
+                $('html, body').scrollTop(0);
+                var windowHeight = $(window).height();
+                var documentHeight = $(document).height();
+                var scrollTo = (documentHeight - windowHeight) / 2;
+                $('html, body').scrollTop(scrollTo);
+                selectedButtonId = temp
+            }
+            scrollToMiddle();
+
+            function handleButtonClick(currentID, newID) {
+                scrollToMiddle();
+                // clearTimeout(scrollTimeout); // Clear previous timeout
+                // scrollTimeout = setTimeout(scrollToMiddle, 4000); // Set new timeout
+                if (newID === currentID) {
+                    return null; 
+                } else {
+                    return newID; 
+                }
+            }
+            $(document).on('submit', '#seekControl', function(e) {e.preventDefault();selectedButtonId = handleButtonClick(selectedButtonId,$(this).attr('id'));});
+            $(document).on('submit', '#volumeControl', function(e) {e.preventDefault();selectedButtonId = handleButtonClick(selectedButtonId,$(this).attr('id'));});
+
+            $(window).on('scroll', function() {
+                var scrollDirection = $(this).scrollTop() > $(this).data('scrollPosition') ? 'down' : 'up';
+                $(this).data('scrollPosition', $(this).scrollTop());
+                let volumeControl = ['volumeIncrease','volumeDecrease'];
+                let seekControl = ['forwardSeek','backSeek'];
+                
+
+                if (selectedButtonId) {
+                    let controlArray;
+                    if (selectedButtonId === 'volumeControl') {
+                        controlArray = volumeControl;
+                    } else if (selectedButtonId === 'seekControl') {
+                        controlArray = seekControl;
+                    }
+
+                    if (controlArray) {
+                        let functionName;
+                        if (scrollDirection === 'up') {functionName = controlArray[0];}
+                        else {functionName = controlArray[1];}
+                        $.ajax({type: 'POST',url: '/',data: { functionName: functionName }});
+                    }
+                }
+
+            });
+        });
+    </script>
+</body>
+</html>
