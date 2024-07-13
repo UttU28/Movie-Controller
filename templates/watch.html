@@ -68,6 +68,10 @@
             }
             $(document).on('submit', '#seekControl', function(e) {e.preventDefault();selectedButtonId = handleButtonClick(selectedButtonId,$(this).attr('id'));});
             $(document).on('submit', '#volumeControl', function(e) {e.preventDefault();selectedButtonId = handleButtonClick(selectedButtonId,$(this).attr('id'));});
+            $(document).on('submit', '#previousTrack', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "previousTrack"}})});
+            $(document).on('submit', '#pause', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "pause"}})});
+            $(document).on('submit', '#nextTrack', function(e) {e.preventDefault();$.ajax({type: 'POST',url: '/',data: {functionName: "nextTrack"}})});
+
 
             $(window).on('scroll', function() {
                 var scrollDirection = $(this).scrollTop() > $(this).data('scrollPosition') ? 'down' : 'up';
@@ -86,8 +90,8 @@
 
                     if (controlArray) {
                         let functionName;
-                        if (scrollDirection === 'up') {functionName = controlArray[0];}
-                        else {functionName = controlArray[1];}
+                        if (scrollDirection === 'up') {functionName = controlArray[1];}
+                        else {functionName = controlArray[0];}
                         $.ajax({type: 'POST',url: '/',data: { functionName: functionName }});
                     }
                 }
